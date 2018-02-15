@@ -1,9 +1,9 @@
 # 导入iris数据集
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
-# 标准化
+# 标准化...
 from sklearn.preprocessing import StandardScaler
-# K临近分类器
+# K临近分类器...
 from sklearn.neighbors import KNeighborsClassifier
 # 评估
 from sklearn.metrics import classification_report
