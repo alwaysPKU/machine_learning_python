@@ -19,7 +19,7 @@ print('训练集', y_train.shape)
 print('测试集', y_test.shape)
 ss = StandardScaler()
 x_train = ss.fit_transform(x_train)
-x_test = ss.fit_transform(x_test)
+x_test = ss.transform(x_test)
 
 # 训练及预测
 lsvc = LinearSVC()
