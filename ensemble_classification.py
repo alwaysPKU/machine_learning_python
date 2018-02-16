@@ -13,6 +13,7 @@ y = titanic['survived']
 x['age'].fillna(x['age'].mean(), inplace=True)
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=33)
 # 对类别类型特征进行转化，成为特征向量
+print(x_train.shape, x_test.shape, y_train.shape, y_test.shape)
 vec = DictVectorizer(sparse=False)
 x_train = vec.fit_transform(x_train.to_dict(orient='record'))
 x_test = vec.transform(x_test.to_dict(orient='record'))
