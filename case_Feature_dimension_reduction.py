@@ -27,7 +27,7 @@ def plot_pca_scatter():
     colors = ['black', 'blue', 'purple', 'yellow', 'magenta', 'red', 'lime', 'cyan', 'orange', 'gray']
     for i in range(len(colors)):  # 按顺序一个颜色一个颜色的循环
         px = X_pca[:, 0][y_digits.as_matrix() == i]  # i颜色第一维数据
-        py = X_pca[:, 1][y_digits.as_matrix() == i]  # 颜色第二维数据
+        py = X_pca[:, 1][y_digits.as_matrix() == i]  # i颜色第二维数据
         plt.scatter(px, py, c=colors[i])
     plt.legend(np.arange(0, 10).astype(str))  # 显示图例
     plt.xlabel('first principal components')
