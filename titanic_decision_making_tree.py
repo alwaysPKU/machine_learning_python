@@ -22,6 +22,7 @@ vec = DictVectorizer(sparse=False)
 x_train = vec.fit_transform(x_train.to_dict(orient='record'))
 # print(vec.feature_names_)
 x_test = vec.transform(x_test.to_dict(orient='record'))
+print(vec.feature_names_)
 # 决策树
 dtc = DecisionTreeClassifier()
 dtc.fit(x_train, y_train)
