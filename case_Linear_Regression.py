@@ -10,6 +10,10 @@ X_train = [[6], [8], [10], [14], [18]]
 y_train = [[7], [9], [13], [17.5], [18]]
 X_test = [[6], [8], [11], [16]]
 y_test = [[8], [12], [15], [18]]
+# X_train = [[10000], [20000], [30000], [40000], [100000]]
+# y_train = [[11], [57], [130], [250], [1784]]
+# X_test = [[5000000]]
+# y_test = [[0]]
 # 一次拟合
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
@@ -28,6 +32,7 @@ xx_poly2 = poly2.transform(xx)
 yy_poly2 = regressor_poly2.predict(xx_poly2)
 print('2次：')
 X_test_poly2 = poly2.transform(X_test)
+print(regressor_poly2.predict(X_test_poly2))
 print(regressor_poly2.score(X_test_poly2, y_test))
 # 4次多项式拟合
 poly4 = PolynomialFeatures(degree=4)  # 4次
